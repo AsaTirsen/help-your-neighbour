@@ -12,6 +12,7 @@
     font-size: 2rem;
     color: white;
     font-weight: bold;
+    text-align: centre;
   }
   
   .header ul {
@@ -19,7 +20,7 @@
     margin: 0;
     padding: 0;
     display: flex;
-    align-items: baseline;
+    flex-direction: column;
   }
   
   .header li {

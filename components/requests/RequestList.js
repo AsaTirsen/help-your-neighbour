@@ -8,8 +8,8 @@ function RequestList(props) {
           <RequestItem
             key={request.id}
             id={request.id}
-            first_name={request.first_name}
-            last_name={request.last_name}
+            firstname={request.firstname}
+            lastname={request.lastname}
             location={request.location}
             dates={request.dates}
             actions={request.actions}
