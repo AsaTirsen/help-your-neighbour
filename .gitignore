@@ -32,3 +32,12 @@ yarn-error.log*
 
 # vercel
 .vercel
+
+#vscode
+/.vscode
+
+# eslint
+.eslintrc.json
+
+# next config
+next.config.js

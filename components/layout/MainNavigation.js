@@ -5,7 +5,7 @@ import classes from "./MainNavigation.module.css";
 function MainNavigation() {
   return (
     <header className={classes.header}>
-      <h2 className={classes.logo}>Förfrågan om husdjursvakt</h2>
+      <h2 className={classes.title}>Förfrågan om husdjursvakt</h2>
       <nav>
       <ul>
         <li>

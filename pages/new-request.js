@@ -1,9 +1,13 @@
+import NewRequestForm from "../components/requests/NewRequestForm";
 
-import React, { Component } from 'react'
+function NewRequestPage() {
 
 
-function NewRequest() {
-    return <><h1>Make new request</h1></>
+  return (
+    <section>
+      <h1> Gör en ny förfrågan</h1>
+      <NewRequestForm/>
+      </section>
+  )
 }
-
-export default NewRequest;
+export default NewRequestPage;
