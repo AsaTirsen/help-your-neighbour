@@ -1,3 +1,7 @@
+This is a hobby project aiming to become a webapp that can be used to request and offer help in a community. The thought is that you should be able to add a request for help, which other users in your community can reply to to offer help. 
+
+
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
