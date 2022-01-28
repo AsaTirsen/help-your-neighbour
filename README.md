@@ -1,4 +1,4 @@
-## What is this project?
+# What is this project?
 
 This is a hobby project aiming to become a webapp that can be used to request and offer help in a community. The thought is that you should be able to add a request for help, which other users in your community can reply to to offer help. 
 
