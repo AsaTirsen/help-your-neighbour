@@ -1,4 +1,4 @@
-# Help your neighbour?
+# Help your neighbour
 
 This hobby project is a webapp for requesting and offering help in a community. The thought is that you should be able to add a request for help, which other users in your community can reply to to offer help. 
 
