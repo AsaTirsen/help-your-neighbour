@@ -1,6 +1,6 @@
 # Help your neighbour?
 
-This hobby project is a webapp that eventually be be used to request and offer help in a community. The thought is that you should be able to add a request for help, which other users in your community can reply to to offer help. 
+This hobby project is a webapp that eventually be used to request and offer help in a community. The thought is that you should be able to add a request for help, which other users in your community can reply to to offer help. 
 
 
 
@@ -13,7 +13,7 @@ npm run dev
 yarn dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) in your browser to see the result.
 
 ### TO DO
 * Testing
