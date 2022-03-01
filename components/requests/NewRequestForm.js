@@ -9,7 +9,11 @@ function NewRequestForm(props) {
   const firstNameInputRef = useRef();
   const lastNameInputRef = useRef();
   const locationInputRef = useRef();
-  const datesInputRef = useRef();
+  const startDateInputRef = useRef();
+  const endDateInputRef = useRef();
+  const detailsInputRef = useRef();
+  const locationInputRef = useRef();
+
   
   const submitForm = event => {
     event.preventDefault()
@@ -18,13 +22,19 @@ function NewRequestForm(props) {
     const enteredFirstName = firstNameInputRef.current.value;
     const enteredLastName = lastNameInputRef.current.value;
     const enteredLocation = locationInputRef.current.value;
-    const enteredDates = datesInputRef.current.value;
+    const enteredStartDate = startDateInputRef.current.value;
+    const enteredEndDate = endDateInputRef.current.value;
+    const enteredDetails = detailsInputRef.current.value;
+    const enteredLocation = locationInputRef.current.value;
 
     const requestData = {
       title: enteredFirstName,
       image: enteredLastName,
       address: enteredLocation,
-      description: enteredDates,
+      startDate: enteredStartDate,
+      endDate: enteredEndDate,
+      description: enteredDetails,
+      location: enteredDetails
     }
   }
 
@@ -45,11 +55,21 @@ function NewRequestForm(props) {
         <div className={classes.control}>
           <label htmlFor="location">Område</label>
           <input type="text" required id="location" ref={locationInputRef} />
+      </div>
+      {/* location */}
+      <div className={classes.control}>
+          <label htmlFor="location">Detaljer</label>
+          <input type="text" required id="location" ref={detailsInputRef} />
         </div>
         {/* dates */}
         <div className={classes.control}>
-          <label htmlFor="dates">Period</label>
-          <input type="text" required id="dates" ref={datesInputRef} />
+          <label htmlFor="dates">Från</label>
+          <input type="text" required id="dates" ref={startDateInputRef} />
+      </div>
+      {/* dates */}
+      <div className={classes.control}>
+          <label htmlFor="dates">Till</label>
+          <input type="text" required id="dates" ref={endDateInputRef} />
         </div>
         {/* button */}
         <div className={classes.actions}>
