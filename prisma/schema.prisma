@@ -16,8 +16,8 @@ model Requests {
   createdAt DateTime @default(now())
   firstname String
   lastname String
-  startdate DateTime
-  enddate DateTime
+  startdate String
+  enddate String
   details String
   location String
   resolved Boolean @default(value: false)

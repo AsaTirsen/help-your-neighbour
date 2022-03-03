@@ -9,33 +9,29 @@ function NewRequestForm(props) {
   const firstNameInputRef = useRef();
   const lastNameInputRef = useRef();
   const locationInputRef = useRef();
+  const detailsInputRef = useRef();
   const startDateInputRef = useRef();
   const endDateInputRef = useRef();
-  const detailsInputRef = useRef();
-  const locationInputRef = useRef();
-
   
   const submitForm = event => {
     event.preventDefault()
-    console.log("submitted")
 
     const enteredFirstName = firstNameInputRef.current.value;
     const enteredLastName = lastNameInputRef.current.value;
     const enteredLocation = locationInputRef.current.value;
+    const enteredDetails = detailsInputRef.current.value;
     const enteredStartDate = startDateInputRef.current.value;
     const enteredEndDate = endDateInputRef.current.value;
-    const enteredDetails = detailsInputRef.current.value;
-    const enteredLocation = locationInputRef.current.value;
 
     const requestData = {
-      title: enteredFirstName,
-      image: enteredLastName,
-      address: enteredLocation,
-      startDate: enteredStartDate,
-      endDate: enteredEndDate,
-      description: enteredDetails,
-      location: enteredDetails
+      firstname: enteredFirstName,
+      lastname: enteredLastName,
+      location: enteredLocation,
+      details: enteredDetails,
+      startdate: enteredStartDate,
+      enddate: enteredEndDate
     }
+    props.onAddRequest(requestData);
   }
 
 
