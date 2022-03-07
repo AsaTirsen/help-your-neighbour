@@ -11,9 +11,9 @@ function RequestItem(props) {
   return (
     <li>
       <div>
-        <p>Namn: {props.firstname + " " + props.lastname}</p>
+        <p>Namn: {props.firstname} {props.lastname}</p>
         <p>Område: {props.location}</p>
-        <p>Period: {props.dates}</p>
+        <p>Period: {props.startdate} - {props.enddate}</p>
       </div>
       <div><button onClick={showDetailsHandler}>Visa detaljer</button></div>
     </li>

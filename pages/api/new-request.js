@@ -1,5 +1,5 @@
 // url: /api/new-request
-import prisma from "../../lib/prisma";
+import prisma from "../../db/prisma";
 
 async function handler(req, res) {
   console.log("before post" + req.body);

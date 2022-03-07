@@ -2,23 +2,7 @@
 import RequestList from "../components/requests/RequestList";
 import React, { Component } from 'react'
 import { loadGetInitialProps } from "next/dist/shared/lib/utils";
-
-const DUMMY_REQUEST = [
-    {
-    id: "1",
-    firstname: "Jon",
-    lastname: "Tirsen",
-    location: "Vantorsvagen",
-    dates: "1 July",
-  },
-    {
-    id: "2",
-    firstname: "Marlene",
-    lastname: "Ahlenius",
-    location: "Fagersjo",
-    dates: "2 July",
-  },
-];
+import prisma from "../db/prisma";
 
 function IndexPage(props) {
     return <><h1>Aktuella förfrågningar</h1>
@@ -27,9 +11,20 @@ function IndexPage(props) {
 
 export async function getStaticProps() { 
   //fetching data on build from API 
+  const requests = await prisma.requests.findMany();
+  
   return {
     props: {
-      requests: DUMMY_REQUEST
+      requests: requests.map(request => ({
+        key: request.id.toString(),
+        id: request.id.toString(),
+        firstname: request.firstname,
+        lastname: request.lastname,
+        location: request.location,
+        details: request.details,
+        startdate: request.startdate,
+        enddate: request.enddate
+      }))
     },
     revalidate: 100
   };

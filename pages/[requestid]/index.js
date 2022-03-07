@@ -1,5 +1,7 @@
 import { Fragment } from "react";
 import RequestDetail from "../../components/requests/RequestDetail";
+import prisma from "../../db/prisma";
+
 
 function RequestDetails() {
   return <RequestDetail details="Vill ha kattvakt" />;
@@ -7,21 +9,14 @@ function RequestDetails() {
 
 export async function getStaticPaths() {
   //create static paths to enable prerendering
+  const requests = await prisma.requests.findMany({
+    select: {id: true},
+    });
+
   return {
     //if false gets 404 with faulty url
     fallback: false,
-    paths: [
-      {
-        params: {
-          requestid: '1',
-        },
-      },
-      {
-        params: {
-          requestid: '2',
-        },
-      },
-    ],
+    paths: requests.map(request => ({ params: { requestid: request.id.toString()}})),
   };
 }
 

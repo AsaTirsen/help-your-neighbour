@@ -11,8 +11,9 @@ function RequestList(props) {
             firstname={request.firstname}
             lastname={request.lastname}
             location={request.location}
-            dates={request.dates}
-            actions={request.actions}
+            details = {request.details}
+            startdate={request.startdate}
+            enddate={request.enddate}
           />
         ))}
       </ul>
