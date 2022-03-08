@@ -20,7 +20,7 @@ export async function getStaticProps(req, res) {
   try {
     requests = await prisma.requests.findMany();
     if ((res.status = 200)) {
-      res.status(200).json({ message: "Request found" });
+      res.json({ message: "Request found" });
     } else {
       throw new Error(res.status);
     }
