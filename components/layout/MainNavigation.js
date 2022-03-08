@@ -7,16 +7,16 @@ function MainNavigation() {
     <header className={classes.header}>
       <h2 className={classes.title}>Förfrågan om husdjursvakt</h2>
       <nav>
-      <ul>
-        <li>
-          <Link href='/'>Alla förfrågningar</Link>
-        </li>
-        <li>
-          <Link href='/new-request'>Gör en ny förfrågan</Link>
-        </li>
-      </ul>
-    </nav>
-        </header>
+        <ul>
+          <li>
+            <Link href="/">Alla förfrågningar</Link>
+          </li>
+          <li>
+            <Link href="/new-request">Gör en ny förfrågan</Link>
+          </li>
+        </ul>
+      </nav>
+    </header>
   );
 }
 

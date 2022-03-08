@@ -1,5 +1,6 @@
 // url: /api/new-request
 import prisma from "../../db/prisma";
+import { disconnect } from "../../db/disconnect";
 
 async function handler(req, res) {
   console.log("before post" + req.body);
@@ -22,10 +23,7 @@ async function handler(req, res) {
     } catch (error) {
       console.log(e.message);
     } finally {
-      async function disconnect() {
-        await prisma.$disconnect();
-      }
-      disconnect();
+      disconnect(prisma);
     }
   }
 }

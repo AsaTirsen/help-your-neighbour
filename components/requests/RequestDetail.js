@@ -1,26 +1,28 @@
 import classes from "./RequestDetail.module.css";
 
 function sendTextMessage() {
-  // router objects has method for pushing page via path 
-console.log(props.id + "users telephonenumber")}
+  // router objects has method for pushing page via path
+  console.log("users telephonenumber");
+}
 
 function RequestDetail(props) {
   return (
-    <li>
+    <ul>
       <div>
         <p>
-          Namn: {props.firstname} {props.lastname}
+          Namn: {props.requestDetail.firstname} {props.requestDetail.lastname}
         </p>
-        <p>Område: {props.location}</p>
+        <p>Område: {props.requestDetail.location}</p>
         <p>
-          Period: {props.startdate} - {props.enddate}
+          Period: {props.requestDetail.startdate} -{" "}
+          {props.requestDetail.enddate}
         </p>
-        <p>Detaljer: {props.details}</p>
+        <p>Detaljer: {props.requestDetail.details}</p>
       </div>
       <div>
         <button onClick={sendTextMessage}>Kontakta</button>
       </div>
-    </li>
+    </ul>
   );
 }
 
