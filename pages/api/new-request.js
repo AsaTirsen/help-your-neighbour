@@ -8,7 +8,6 @@ async function handler(req, res) {
     try {
       const data = req.body;
       //create a connection to db to POST
-      //https://daily-dev-tips.com/posts/nextjs-posting-data-to-postgres-through-prisma/
       const { firstname, lastname, location, details, startdate, enddate } =
         data;
       const request = await prisma.requests.create({
